@@ -1,6 +1,12 @@
 import os
 import json
 import urllib.request
+from dotenv import load_dotenv  # 1. Importar
+
+# 2. Cargar el archivo .env (busca uno en el directorio actual o especifica la ruta)
+# load_dotenv() 
+# O si tu archivo está en una ruta específica:
+load_dotenv(".env")
 
 MODEL = os.environ.get("LLM_MODEL", "claude-sonnet-5")
 
